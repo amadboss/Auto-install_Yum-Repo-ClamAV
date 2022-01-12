@@ -8,7 +8,7 @@
 /usr/bin/mkdir /home/clamav/
 /usr/bin/mkdir -p /antivirus/ClamavBase/
 mv <Scripte_de_scan_client> /home/clamav/
-mv scripte_client.sh /home/clamav/
+mv $0 /home/clamav/
 /usr/bin/mount <IP DU NAS>:/vol/Vsavbase/Qsavbase.u/clamav /antivirus/ClamavBase/
 echo "<IP DU NAS>:/vol/Vsavbase/Qsavbase.u/clamav /antivirus/ClamavBase/    nfs     rw      0 0" >> /etc/fstab
 
