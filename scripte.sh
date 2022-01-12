@@ -7,7 +7,7 @@
 
 /usr/bin/mkdir /home/clamav/
 /usr/bin/mkdir -p /antivirus/ClamavBase/
-mv clamscan.sh /home/clamav/
+mv <Scripte_de_scan_client> /home/clamav/
 mv scripte_client.sh /home/clamav/
 /usr/bin/mount <IP DU NAS>:/vol/Vsavbase/Qsavbase.u/clamav /antivirus/ClamavBase/
 echo "<IP DU NAS>:/vol/Vsavbase/Qsavbase.u/clamav /antivirus/ClamavBase/    nfs     rw      0 0" >> /etc/fstab
@@ -84,8 +84,8 @@ done </tmp/Verifrepo.txt
 /usr/bin/rm -f /tmp/Verifrepo.txt
 /usr/bin/yum install clamav -y
 
-echo "31 05 * * * /bin/bash /home/clamav/clamscan.sh / 2>&1" >> /var/spool/cron/root
-echo "00 06,12,19 * * * /bin/bash /home/clamav/clamscan.sh  /home 2>&1" >> /var/spool/cron/root
+echo "31 05 * * * /bin/bash /home/clamav/<Scripte_de_scan_client> / 2>&1" >> /var/spool/cron/root
+echo "00 06,12,19 * * * /bin/bash /home/clamav/<Scripte_de_scan_client>  /home 2>&1" >> /var/spool/cron/root
 
 
 	
