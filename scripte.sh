@@ -68,7 +68,7 @@ fi
 /usr/bin/yum autoremove
 /usr/bin/yum update -y
 
-#On verifie si tout les repoliste on vien des pacet < 0 sinon il y a un probleme
+#On verifie si tout les repoliste on bien des paquet < 0 sinon il y a un probleme
 
 yum repolist | awk '{print $6,$7}' | grep -v hostfile | grep -v "dépôt" | sort -u | sed '1d' >> /tmp/Verifrepo.txt
 
